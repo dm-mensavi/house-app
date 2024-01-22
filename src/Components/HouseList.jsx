@@ -23,7 +23,7 @@ function HouseList() {
   return (
     <div>
       {loading ? (
-        <div>Loading...</div>
+        <div className="spinner"></div>
       ) : (
         <div>
           {houses.map((house) => (
@@ -42,25 +42,27 @@ function HouseList() {
   );
 }
 
+// Colors 
 const colors = {
   red: "#ff0000",
   yellow: "#ffff00",
   blue: "#0000ff",
-  green: "#00ff00",
   orange: "#ffa500",
   white: "#ffffff",
-  //scarlet: "#ff2400",
-  //gold: "#ffd700",
+  scarlet: "#ff2400",
+  gold: "#ffd700",
   bronze: "#cd7f32",
   black: "#000000",
   grey: "#808080",
+  silver: "#c0c0c0",
+  green: "#008000",
 };
 
 // Utility function to extract colors from houseColours
 const getColorFromHouseColours = (houseColours, type) => {
   const colorsArray = houseColours.split(' and ');
-  const colorFrom = colors[colorsArray[0].toLowerCase()] || colors.white;
-  const colorTo = colors[colorsArray[1].toLowerCase()] || colors.black;
+  const colorFrom = colors[colorsArray[0].toLowerCase()] || colors.white; // Default to white
+  const colorTo = colors[colorsArray[1].toLowerCase()] || colors.black;  // Default to black
 
   return type === 'from' ? colorFrom : colorTo;
 };

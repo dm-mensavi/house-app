@@ -8,10 +8,10 @@ const Card = ({ name, animal, founder, gradientFrom, gradientTo }) => {
   const gradientBarStyle = getGradientBarStyle(gradientFrom, gradientTo);
 
   return (
-    <div className="w-[60vw] h-36 mt-10 border border-gray-300 shadow-md rounded-lg p-4 mx-auto">
+    <div class="card-container">
       {/* Heading */}
       <div className="flex justify-between mx-5 mt-1">
-        <h2 className="font-bold text-2xl text-left">{name}</h2>
+        <h2 className="font-bold text-lg sm:text-2xl text-left">{name}</h2>
         <p className="text-right">{animal}</p>
       </div>
 

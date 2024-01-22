@@ -9,40 +9,12 @@ body {
 }
 
 @layer base {
-  .h1 {
-    @apply text-[60px] leading-[1.875] font-bold;
-  }
-
-  .h2 {
-    @apply text-[42px] leading-[1.875] font-bold;
-  }
- 
-  .p {
-    @apply text-[16px] leading-[1.875] font-normal;
-  }
-
-  .link-text {
-    @apply h4 hover:text-primary cursor-pointer transition-all duration-300  ease-in-out
-  }
-
-  .link-animate {
-    @apply hover:text-primary/90 cursor-pointer transition-all duration-300  ease-in-out
-  }
-
-  .general-margin {
-    @apply  w-[95%] lg:w-[90%] xl:w-[80%] mx-auto 
-  }
-
   .spinner {
-    @apply text-2xl bg-slate-600 font-bold text-center py-4; 
+    @apply mx-auto mt-20 border-t-4 border-r-4 border-gray border-solid h-10 w-10 rounded-full animate-spin; 
   }
-  
-  .house-list {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4; 
-  }
-  
-  .house-card {
-    @apply bg-white rounded-lg p-4 shadow-md;
+
+  .card-container {
+    @apply w-[90vw] md:w-[60vw] max-w-xl h-36 mt-7 border border-gray/30 shadow-md rounded-lg p-4 mx-auto;
   }
 
 }
